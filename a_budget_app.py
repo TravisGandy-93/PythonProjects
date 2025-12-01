@@ -125,5 +125,5 @@ food.transfer(50, clothing)
 print(food)
 
 categories = [food, clothing, car]
-chart = create_spend_chart(categories)
-print(chart)
+spend_chart = create_spend_chart(categories)
+print(spend_chart)
