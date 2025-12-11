@@ -11,7 +11,7 @@ def binary_search(search_list, value):
 
         if value == value_at_middle:
             return path_to_target, f"Value found at index {mid}"
-        elif value > value_at_middle:
+        if value > value_at_middle:
             low = mid + 1
         else:
             high = mid - 1

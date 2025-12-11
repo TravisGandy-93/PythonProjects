@@ -24,8 +24,7 @@ class Category:
                 'description': description
             })
             return True
-        else:
-            return False
+        return False
 
     def get_balance(self):
         """Method to get the current balance of the category."""
@@ -40,15 +39,13 @@ class Category:
             self.withdraw(amount, f"Transfer to {destination.name}")
             destination.deposit(amount, f"Transfer from {self.name}")
             return True
-        else:
-            return False
+        return False
 
     def check_funds(self, amount):
         """Method to check if there are enough funds for a withdrawal."""
         if amount > self.get_balance():
             return False
-        else:
-            return True
+        return True
 
     def __str__(self):
         string = ""
