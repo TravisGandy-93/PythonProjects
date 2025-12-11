@@ -78,16 +78,16 @@ class DiscountEngine:
 
 
 if __name__ == '__main__':
-    product = Product('Wireless Mouse', 50.0)
-    user_tier = 'Premium'
+    item = Product('Wireless Mouse', 50.0)
+    user_status = 'Premium'
 
-    strategies = [
+    strategy_list = [
         PercentageDiscount(10),
         FixedAmountDiscount(5),
         PremiumUserDiscount()
     ]
 
-    engine = DiscountEngine(strategies)
-    best_price = engine.calculate_best_price(product, user_tier)
+    engine = DiscountEngine(strategy_list)
+    best_price = engine.calculate_best_price(item, user_status)
     print(
-        f'Best price for {product.name} for {user_tier} user: ${best_price:.2f}')
+        f'Best price for {item.name} for {user_status} user: ${best_price:.2f}')
